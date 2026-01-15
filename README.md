@@ -37,9 +37,6 @@ Según el laboratorio, los scripts pueden cubrir:
 │ ├── payload.txt
 │ └── README.md
 
-yaml
-Copiar código
-
 Cada laboratorio incluye:
 - Script o PoC
 - Explicación breve del enfoque
@@ -70,4 +67,4 @@ Pentester Freelance | Seguridad Ofensiva
 
 Este repositorio refleja **mi forma de trabajar**: análisis, explotación realista y documentación clara del impacto.
 
-Si quieres validar la seguridad real de una aplicación web o servidor Linux, puedes contactarme di
+Si quieres validar la seguridad real de una aplicación web o servidor Linux, puedes contactarme directamente.
