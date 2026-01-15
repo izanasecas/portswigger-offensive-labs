@@ -36,6 +36,8 @@ Ejemplo de payload válido probado manualmente:
 AND SUBSTRING((SELECT password FROM users WHERE username='administrator'),1,1)='b'
 Si la condición es verdadera, el mensaje "Welcome back" aparece en la respuesta.
 
+```
+
 ⚙️ Enfoque de explotación
 Debido a la naturaleza ciega de la vulnerabilidad, se automatiza el proceso mediante un script en Python que:
 
