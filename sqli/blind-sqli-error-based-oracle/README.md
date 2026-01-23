@@ -1,4 +1,4 @@
-# Blind SQL Injection – Error-Based (Oracle)
+# Blind SQL Injection –  Blind SQL injection with conditional errors  (Oracle)
 
 ## 📌 Descripción
 
