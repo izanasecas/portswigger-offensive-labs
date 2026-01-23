@@ -35,3 +35,19 @@ Mide el tiempo de respuesta del servidor
 Evalúa condiciones booleanas mediante delays
 
 Extrae la contraseña carácter a carácter
+
+⚠️ Aviso legal
+
+Este material ha sido desarrollado exclusivamente con fines educativos y para su uso en entornos de laboratorio controlados.
+
+No debe utilizarse contra sistemas sin autorización expresa.
+
+👤 Autor
+
+Izan García Pentester Freelance | Seguridad Ofensiva
+
+Portfolio: https://izanasecas.github.io/izanasecas/
+
+LinkedIn: https://www.linkedin.com/in/izanasecas/
+
+Hack The Box: https://app.hackthebox.com/profile/1015013
