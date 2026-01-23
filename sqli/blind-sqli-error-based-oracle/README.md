@@ -28,4 +28,18 @@ Se utiliza una condición `CASE WHEN` para provocar errores SQL (`TO_CHAR(1/0)`)
 
 Mediante pruebas controladas, se puede extraer la contraseña carácter a carácter evaluando si la aplicación devuelve un error.
 
+⚠️ Aviso legal
 
+Este material ha sido desarrollado exclusivamente con fines educativos y para su uso en entornos de laboratorio controlados.
+
+No debe utilizarse contra sistemas sin autorización expresa.
+
+👤 Autor
+
+Izan García Pentester Freelance | Seguridad Ofensiva
+
+Portfolio: https://izanasecas.github.io/izanasecas/
+
+LinkedIn: https://www.linkedin.com/in/izanasecas/
+
+Hack The Box: https://app.hackthebox.com/profile/1015013
